@@ -40,8 +40,21 @@ const Layout = () => {
       screenOptions={{
         tabBarStyle: {
           backgroundColor: colors.black,
+          shadowColor: "#323436",
+          shadowOffset: {
+            height: 12,
+          },
+          border: "none",
+          // paddingVertical: 10,
+          height: 64,
         },
         tabBarShowLabel: false,
+        headerShown: false,
+      }}
+      sceneContainerStyle={{
+        backgroundColor: colors.dark,
+        paddingTop: 32,
+        paddingHorizontal: 24,
       }}
       onLayout={onLayoutRootView}
     >
@@ -51,7 +64,7 @@ const Layout = () => {
           tabBarIcon: ({ color, focused, size }) => {
             return (
               <IconWrapper focused={focused}>
-                <FeedsIcon />
+                <FeedsIcon size={1.2} />
               </IconWrapper>
             );
           },
@@ -63,7 +76,7 @@ const Layout = () => {
           tabBarIcon: ({ color, focused, size }) => {
             return (
               <IconWrapper focused={focused}>
-                <SearchIcon />
+                <SearchIcon size={1.2} />
               </IconWrapper>
             );
           },
@@ -90,7 +103,7 @@ const Layout = () => {
           tabBarIcon: ({ color, focused, size }) => {
             return (
               <IconWrapper focused={focused}>
-                <NotificationIcon />
+                <NotificationIcon size={1.2} />
               </IconWrapper>
             );
           },
@@ -102,7 +115,7 @@ const Layout = () => {
           tabBarIcon: ({ color, focused, size }) => {
             return (
               <IconWrapper focused={focused}>
-                <ProfileIcon />
+                <ProfileIcon size={1.2} />
               </IconWrapper>
             );
           },
